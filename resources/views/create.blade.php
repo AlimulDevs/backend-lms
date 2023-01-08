@@ -14,7 +14,7 @@
     <div class="container mt-5">
         @if ($message = Session::get('success'))
         <div class="alert alert-success alert-dismissible" role="alert">
-            {{$message}}
+            {{$message}} <a href="/">Lihat data</a>
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
         @elseif ($message = Session::get('failed'))
@@ -55,7 +55,7 @@
                     <label for="end_date" class="form-label mt-2">End Date</label>
                     <input type="date" id="end_date" class="form-control" name="end_date" required>
                     <label for="progress" class="form-label mt-2">Progress (%)</label>
-                    <input type="number" id="progress" class="form-control" name="progress" required>
+                    <input type="number" max="100" min="0" id="progress" class="form-control" name="progress" required>
 
                     <input type="submit" class="btn btn-primary mt-3" value="Create Data">
                 </form>
