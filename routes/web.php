@@ -16,4 +16,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::get("/", [Controller::class, "index"]);
 Route::get("/createIndex", [Controller::class, "createIndex"]);
+Route::post("/create", [Controller::class, "create"]);
 Route::get("/delete/{id}", [Controller::class, "delete"]);

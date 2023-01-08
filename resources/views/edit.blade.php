@@ -40,6 +40,7 @@
             <div class="card-body">
                 <form action="/create" method="post" enctype="multipart/form-data">
                     @csrf
+                    <input type="hidden" value="">
                     <label for="project_name" class="form-label mt-2">Project Name</label>
                     <input type="text" id="project_name" class="form-control" name="project_name" required>
                     <label for="client" class="form-label mt-2">Client</label>

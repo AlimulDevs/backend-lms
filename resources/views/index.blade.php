@@ -73,7 +73,7 @@
 
                                         </div>
                                     </div>
-                                    <p> {{$dt->progress}}%</p>
+                                    <p class="fw-bold"> {{$dt->progress}}%</p>
 
 
 
