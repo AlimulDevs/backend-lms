@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get("/", [Controller::class, "index"]);
+Route::get("/createIndex", [Controller::class, "createIndex"]);
+Route::get("/delete/{id}", [Controller::class, "delete"]);
