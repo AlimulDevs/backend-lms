@@ -28,7 +28,7 @@
             <div class="card-header">
                 <div class="row">
                     <div class="col">
-                        Create
+                        Edit
                     </div>
                     <div class="col text-end">
                         <a href="/">Back to home</a>
@@ -38,27 +38,27 @@
 
             </div>
             <div class="card-body">
-                <form action="/create" method="post" enctype="multipart/form-data">
+                <form action="/edit" method="post" enctype="multipart/form-data">
                     @csrf
-                    <input type="hidden" value="">
+                    <input type="hidden" name="id" value="{{$data->id}}">
                     <label for="project_name" class="form-label mt-2">Project Name</label>
-                    <input type="text" id="project_name" class="form-control" name="project_name" required>
+                    <input type="text" id="project_name" class="form-control" value="{{$data->project_name}}" name="project_name" required>
                     <label for="client" class="form-label mt-2">Client</label>
-                    <input type="text" id="client" class="form-control" name="client" required>
+                    <input type="text" id="client" class="form-control" name="client" value="{{$data->client}}" required>
                     <label for="name_leader" class="form-label mt-2">Name Leader</label>
-                    <input type="text" id="name_leader" class="form-control" name="name_leader" required>
+                    <input type="text" id="name_leader" class="form-control" name="name_leader" value="{{$data->name_leader}}" required>
                     <label for="email_leader" class="form-label mt-2">Email Leader</label>
-                    <input type="email" id="email_leader" class="form-control" name="email_leader" required>
+                    <input type="email" id="email_leader" class="form-control" name="email_leader" value="{{$data->email_leader}}" required>
                     <label for="foto_leader" class="form-label mt-2">Foto Leader</label>
-                    <input type="file" id="foto_leader" class="form-control" name="foto_leader" required>
+                    <input type="file" id="foto_leader" class="form-control" name="foto_leader">
                     <label for="start_date" class="form-label mt-2">Start Date</label>
-                    <input type="date" id="start_date" class="form-control" name="start_date" required>
+                    <input type="date" id="start_date" class="form-control" name="start_date" value="{{$data->start_date}}" required>
                     <label for="end_date" class="form-label mt-2">End Date</label>
-                    <input type="date" id="end_date" class="form-control" name="end_date" required>
+                    <input type="date" id="end_date" class="form-control" name="end_date" value="{{$data->end_date}}" required>
                     <label for="progress" class="form-label mt-2">Progress (%)</label>
-                    <input type="number" id="progress" class="form-control" name="progress" required>
+                    <input type="number" max="100" min="0" id="progress" class="form-control" name="progress" value="{{$data->progress}}" required>
 
-                    <input type="submit" class="btn btn-primary mt-3" value="Create Data">
+                    <input type="submit" class="btn btn-primary mt-3" value="Update Data">
                 </form>
             </div>
         </div>

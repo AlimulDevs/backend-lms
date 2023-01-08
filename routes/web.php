@@ -15,6 +15,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get("/", [Controller::class, "index"]);
+Route::get("/loginIndex", [Controller::class, "loginIndex"]);
+Route::post("/login", [Controller::class, "login"]);
+Route::get("/logout", [Controller::class, "logout"]);
+Route::get("/registerIndex", [Controller::class, "registerIndex"]);
+Route::post("/register", [Controller::class, "register"]);
+Route::get("/search", [Controller::class, "search"]);
 Route::get("/createIndex", [Controller::class, "createIndex"]);
 Route::post("/create", [Controller::class, "create"]);
+Route::post("/edit", [Controller::class, "edit"]);
 Route::get("/delete/{id}", [Controller::class, "delete"]);
+Route::get("/editIndex/{id}", [Controller::class, "editIndex"]);
