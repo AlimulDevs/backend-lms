@@ -31,7 +31,7 @@
                         Edit
                     </div>
                     <div class="col text-end">
-                        <a href="/">Back to home</a>
+                        <a href="/">Back to homes</a>
                     </div>
                 </div>
 
